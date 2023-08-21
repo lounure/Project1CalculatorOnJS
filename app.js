@@ -27,7 +27,11 @@ minusBtn.onclick = function () {
     action = '-'
 }
 
-//document.getElementsByClassName('WannaBeBorderRadius').style.borderRadius = '5px';
+let elements = document.getElementsByClassName('WannaBeBorderRadius')[0]
+console.log({elements});
+elements.style.borderRadius = '5px';
+// здесь не айди, а класс. Классы - это массивы, поэтому нужен конкретный индекс элемента хтмл (для айди не нужен)
+
 
 submitBtn.onclick = function () {
     if (action == '+') {
