@@ -27,23 +27,32 @@ minusBtn.onclick = function () {
     action = '-'
 }
 
-let elements = document.getElementsByClassName('WannaBeBorderRadius')[0]
+/*let paragraphWithBorderRadius = document.getElementsByClassName('WannaBeBorderRadius')[0]
 console.log({elements});
-elements.style.borderRadius = '5px';
-// здесь не айди, а класс. Классы - это массивы, поэтому нужен конкретный индекс элемента хтмл (для айди не нужен)
+paragraphWithBorderRadius.style.borderRadius = '5px';
+// здесь не айди, а класс. Классы - это массивы, поэтому нужен конкретный индекс элемента хтмл
+ (для айди не нужен)*/
 
 
 submitBtn.onclick = function () {
     if (action == '+') {
         const sum = Number(input1.value) + Number(input2.value);
 resultElement.textContent = sum;
+/*
 if (sum > 0) {resultElement.style.backgroundColor = 'LightGreen'}
 else {resultElement.style.backgroundColor = 'Tomato'}
+*/
+if (sum > 0) {resultElement.style.color = "green"}
+else {resultElement.style.color = "red"}
 }
    else {
     const sum = Number(input1.value) - Number(input2.value);
 resultElement.textContent = sum;
+/*
 if (sum > 0) {resultElement.style.backgroundColor = 'LightGreen'}
 else {resultElement.style.backgroundColor = 'Tomato'}
+*/
+if (sum > 0) {resultElement.style.color = "green"}
+else {resultElement.style.color = "red"}
    }
 }
